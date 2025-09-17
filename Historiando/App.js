@@ -9,7 +9,7 @@ export default function App() {
   return (
    <NavigationContainer>
       <Stack.Navigator initialRouteName='Home'>
-        <Stack.Screen name="Home" component={HomeScreen} options={{headerShow: true, title: ' '}}/>
+        <Stack.Screen name="Home" component={HomeScreen} options={{headerShow: true, title: ' ', headerStyle :{backgroundColor: 'rgba(7, 43, 89, 1)', height: 0}}}/>
       </Stack.Navigator>
    </NavigationContainer>
   );
