@@ -1,10 +1,12 @@
 import * as React from 'react';
 
 import { StyleSheet, Image, Text, View, FlatList, Dimensions} from 'react-native';
+import Liz from '../assets/liz.png';
+import Leo from '../assets/leo.png';
 
 const personagens = [
-    {id: '1', titulo: 'Liz (Elizabethe) ', personalidade: 'arteira', imagem:'../assets/liz.png'},
-    {id: '2', titulo: 'Leo (Leonardo)', personalidade: 'calmo', imagem:'../assets/leo.png'},
+    {id: '1', titulo: 'Liz (Elizabethe) ', personalidade: 'arteira', imagem: Liz},
+    {id: '2', titulo: 'Leo (Leonardo)', personalidade: 'calmo', imagem: Leo},
 ];
 
 const {width, height}= Dimensions.get('window');
@@ -19,7 +21,7 @@ export default function HomeScreen(navigation) {
                 keyExtractor={(item) => item.id}
                 renderItem={({item}) => (
                     <View style={styles.item}>
-                        <Image style={styles.img} source={{ uri: item.imagem}} />
+                        <Image style={styles.img} source={item.imagem} />
                         <View>
                             <Text style={styles.text}>{item.titulo}</Text>
                             <Text>{item.personalidade}</Text>
@@ -50,8 +52,8 @@ const styles = StyleSheet.create({
         paddingHorizontal:10
     },
     img: {
-        width:width*1,
-        height:heigth*1,
+        width:width*0.5,
+        height:height*0.5,
         marginRight:10,
         borderRadius:5
 
