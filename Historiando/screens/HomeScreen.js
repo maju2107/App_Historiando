@@ -5,8 +5,8 @@ import Liz from '../assets/liz.png';
 import Leo from '../assets/leo.png';
 
 const personagens = [
-    {id: '1', titulo: 'Liz (Elizabethe) ', personalidade: 'arteira', imagem: Liz},
-    {id: '2', titulo: 'Leo (Leonardo)', personalidade: 'calmo', imagem: Leo},
+    {id: '1', titulo: 'Liz (Elizabethe)          ', personalidade: 'Arteira\nCorajosa', imagem: Liz},
+    {id: '2', titulo: 'Leo (Leonardo)        ', personalidade: 'Lerdo\nEsperto', imagem: Leo},
 ];
 
 const {width, height}= Dimensions.get('window');
@@ -23,8 +23,8 @@ export default function HomeScreen(navigation) {
                     <View style={styles.item}>
                         <Image style={styles.img} source={item.imagem} />
                         <View>
-                            <Text style={styles.text}>{item.titulo}</Text>
-                            <Text>{item.personalidade}</Text>
+                            <Text style={styles.texto}>{item.titulo}</Text>
+                            <Text style={styles.Personalidade}>{item.personalidade}</Text>
                         </View>
                     </View>
                 )}
@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     item: {
         flexDirection:'row',
         alignItems:'center',
-        paddingHorizontal:10
+        paddingHorizontal:4
     },
     img: {
         width:width*0.5,
@@ -58,10 +58,15 @@ const styles = StyleSheet.create({
         borderRadius:5
 
     },
-    text: {
-        fontSize:16,
+    texto: {
+        fontSize:20,
         fontWeight:'bold',
         color: 'rgba(245, 32, 32, 1)'
     },
+
+    Personalidade: {
+        color: 'rgba(200, 193, 193, 1)',
+        fontSize: 14
+    }
     
 });
