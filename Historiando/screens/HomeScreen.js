@@ -3,10 +3,8 @@ import * as React from 'react';
 import { StyleSheet, Image, Text, View, FlatList, Dimensions} from 'react-native';
 
 const personagens = [
-    {id: '1', titulo: 'Liz (Elizabethe) ', personalidade: 'arteira', imagem:'https://picsum.photos/200/300?7'},
-    {id: '2', titulo: 'Leo (Leonardo)', personalidade: 'calmo', imagem:'https://picsum.photos/200/300?7'},
-    {id: '3', titulo: 'Mãe', personalidade: 'estressada',imagem:'https://picsum.photos/200/300?7'},
-    {id: '4', titulo: 'Pai', personalidade: 'maluco', imagem:'https://picsum.photos/200/300?7'},
+    {id: '1', titulo: 'Liz (Elizabethe) ', personalidade: 'arteira', imagem:'../assets/liz.png'},
+    {id: '2', titulo: 'Leo (Leonardo)', personalidade: 'calmo', imagem:'../assets/leo.png'},
 ];
 
 const {width, height}= Dimensions.get('window');
@@ -52,8 +50,8 @@ const styles = StyleSheet.create({
         paddingHorizontal:10
     },
     img: {
-        width:60,
-        height:90,
+        width:width*1,
+        height:heigth*1,
         marginRight:10,
         borderRadius:5
 
